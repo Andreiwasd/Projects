@@ -1,8 +1,6 @@
-Cozma Andrei 333AA
+----Paralelizarea unui algoritm genetic----
 
-----Tema #1 Paralelizarea unui algoritm genetic----
-
-Tema cuprinde urmatoarele fisiere:
+Proiectul cuprinde urmatoarele fisiere:
 
 -makefile
 -individual.h   - nu a fost modificat fata de codul secvential

@@ -1,0 +1,393 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tester.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tester"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : display_and_drop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Facultate\Anul 3\AC\Tema1\tester_tema_1\baggage_drop.v" into library work
+Parsing module <baggage_drop>.
+Analyzing Verilog file "D:\Facultate\Anul 3\AC\Tema1\tester_tema_1\display_and_drop.v" into library work
+Parsing module <display_and_drop>.
+Analyzing Verilog file "D:\Facultate\Anul 3\AC\Tema1\tester_tema_1\sensors_input.v" into library work
+Parsing module <sensors_input>.
+Analyzing Verilog file "D:\Facultate\Anul 3\AC\Tema1\tester_tema_1\square_root.v" into library work
+Parsing module <square_root>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <display_and_drop>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <display_and_drop>.
+    Related source file is "D:\Facultate\Anul 3\AC\Tema1\tester_tema_1\display_and_drop.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg3<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg3<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg3<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg3<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg3<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg3<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg3<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg4<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg4<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg4<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg4<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg4<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg4<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seven_seg4<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <drop_activated>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit comparator greater for signal <n0001> created at line 34
+    Summary:
+	inferred  29 Latch(s).
+	inferred   1 Comparator(s).
+	inferred  86 Multiplexer(s).
+Unit <display_and_drop> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 29
+ 1-bit latch                                           : 29
+# Comparators                                          : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 86
+ 1-bit 2-to-1 multiplexer                              : 86
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Comparators                                          : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 86
+ 1-bit 2-to-1 multiplexer                              : 86
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <seven_seg2_6> (without init value) has a constant value of 1 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg2_4> (without init value) has a constant value of 1 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg2_0> (without init value) has a constant value of 0 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg3_4> (without init value) has a constant value of 1 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg3_1> (without init value) has a constant value of 0 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg3_3> (without init value) has a constant value of 1 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg3_0> (without init value) has a constant value of 0 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg4_6> (without init value) has a constant value of 1 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seven_seg4_4> (without init value) has a constant value of 1 in block <display_and_drop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <drop_activated> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg1_6> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg1_5> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg1_4> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg1_3> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg1_2> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg1_1> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg1_0> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg2_5> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg2_1> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg2_3> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg2_2> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg3_6> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg3_5> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg3_2> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg4_5> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg4_1> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg4_3> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg4_2> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:1294 - Latch <seven_seg4_0> is equivalent to a wire in block <display_and_drop>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg2<2>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg1<2>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg4<3>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg4<1>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg1<1>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg1<3>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg2<1>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg4<0>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg1<4>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg1<6>.
+WARNING:Xst:2170 - Unit display_and_drop : the following signal(s) form a combinatorial loop: seven_seg2<5>.
+
+Optimizing unit <display_and_drop> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block display_and_drop, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : tester.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 40
+#      GND                         : 1
+#      INV                         : 4
+#      LUT2                        : 18
+#      MUXCY                       : 16
+#      VCC                         : 1
+# IO Buffers                       : 62
+#      IBUF                        : 33
+#      OBUF                        : 29
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                        9  out of   4656     0%  
+ Number of 4 input LUTs:                 22  out of   9312     0%  
+ Number of IOs:                          62
+ Number of bonded IOBs:                  62  out of    232    26%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 11.856ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 596 / 20
+-------------------------------------------------------------------------
+Delay:               11.856ns (Levels of Logic = 22)
+  Source:            t_lim<0> (PAD)
+  Destination:       seven_seg1<6> (PAD)
+
+  Data Path: t_lim<0> to seven_seg1<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.595  t_lim_0_IBUF (t_lim_0_IBUF)
+     LUT2:I0->O            1   0.704   0.000  Mcompar_n0001_lut<0> (Mcompar_n0001_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_n0001_cy<0> (Mcompar_n0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<1> (Mcompar_n0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<2> (Mcompar_n0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<3> (Mcompar_n0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<4> (Mcompar_n0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<5> (Mcompar_n0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<6> (Mcompar_n0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<7> (Mcompar_n0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<8> (Mcompar_n0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<9> (Mcompar_n0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<10> (Mcompar_n0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<11> (Mcompar_n0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<12> (Mcompar_n0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<13> (Mcompar_n0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_n0001_cy<14> (Mcompar_n0001_cy<14>)
+     MUXCY:CI->O           1   0.459   0.420  Mcompar_n0001_cy<15> (Mcompar_n0001_cy<15>)
+     INV:I->O              2   0.704   0.622  Mcompar_n0001_cy<15>_inv_INV_0 (n0001)
+     LUT2:I0->O            3   0.704   0.531  Mmux_seven_seg2[6]_seven_seg2[6]_MUX_89_o11 (seven_seg2_2_OBUF)
+     INV:I->O              5   0.704   0.633  seven_seg1<6>1_INV_0 (seven_seg1_6_OBUF)
+     OBUF:I->O                 3.272          seven_seg1_6_OBUF (seven_seg1<6>)
+    ----------------------------------------
+    Total                     11.856ns (9.055ns logic, 2.801ns route)
+                                       (76.4% logic, 23.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.17 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 4470532 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   72 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

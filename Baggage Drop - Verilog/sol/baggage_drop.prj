@@ -1,0 +1,4 @@
+verilog work "square_root.v"
+verilog work "sensors_input.v"
+verilog work "display_and_drop.v"
+verilog work "baggage_drop.v"

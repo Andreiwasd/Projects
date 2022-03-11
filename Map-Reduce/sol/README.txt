@@ -1,6 +1,4 @@
-Cozma Andrei 333AA
-
-Pntru realizarea acestei teme am contruit 4 Map-uri care reprezinta taskurile pe care threadurile trebuie sa le 
+Pentru realizarea acestei teme am contruit 4 Map-uri care reprezinta taskurile pe care threadurile trebuie sa le 
 proceseze. Aceste 4 Map-uri sunt:
 Map<String, List<String>> task; - T1 → in1.txt, offset 0, dimensiune 10 (“Algoritmi ”)
 Map<String, Dictionar> task2;   - RT1 → in1.txt; {9: 1}; (“Algoritmi”)

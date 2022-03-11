@@ -1,5 +1,3 @@
-Cozma Andrei 333AA
-
 Am definit global semnificatia cuvintelor coordonatorX unde X este rankul coordonatorilor 0, 1 si 2.
 In prima parte a programului am initializat MPI si am initializat cele 3 tag-uri.
 Coordonatorul 0 si workerii acestuia vor transmite mesaje cu tag-ul tag0. La fel procedeaza si ceilalti

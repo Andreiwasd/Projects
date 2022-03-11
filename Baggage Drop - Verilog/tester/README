@@ -1,0 +1,16 @@
+Arhitectura Calculatoarelor
+Tester for Tema 1 - Baggage Drop
+
+Setup:
+-modify the path in line 5, "call C:\Xilinx\14.7\ISE_DS\settings64.bat", from start_test.bat to correspond with your Xilinx installation (use "settings32.bat" if you are running the 32bit version); if you followed the Xilinx install tutorial, the default path should work.
+-you can change the parameters at the start of the testing module in "tester/tester.v" to see more/less debug output.
+Set to 1 show_top_output parameter to enable messages for test_baggage_drop_system
+Set to 1 show_display_drop_output parameter to enable messages for test_display_and_drop
+Set to 1 show_sensors_output parameter to enable messages for test_sensors_input
+Set to 1 show_sqrt_output parameter to enable messages for test_square_root
+ 
+
+Running:
+-copy your Verilog files in the root of the folder
+-run (double-click) start_test.bat; results will be in "results.txt" and execution log will be in "results.log"
+-you can enable the simulator GUI by changing "nogui" to "gui" in line 8 of start_test.bat

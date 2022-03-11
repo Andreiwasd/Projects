@@ -1,0 +1,1121 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: square_root.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "square_root.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "square_root"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : square_root
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "square_root.v" in library work
+Module <square_root> compiled
+No errors in compilation
+Analysis of file <"square_root.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <square_root> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <square_root>.
+Module <square_root> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <square_root>.
+    Related source file is "square_root.v".
+WARNING:Xst:646 - Signal <res<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <res<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <num> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <b> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit adder for signal <$add0000> created at line 47.
+    Found 32-bit adder for signal <$add0001> created at line 47.
+    Found 32-bit adder for signal <$add0002> created at line 47.
+    Found 32-bit adder for signal <$add0003> created at line 47.
+    Found 32-bit adder for signal <$add0004> created at line 47.
+    Found 32-bit adder for signal <$add0005> created at line 47.
+    Found 32-bit adder for signal <$add0006> created at line 47.
+    Found 32-bit adder for signal <$add0007> created at line 47.
+    Found 32-bit adder for signal <$add0008> created at line 47.
+    Found 32-bit adder for signal <$add0009> created at line 47.
+    Found 32-bit adder for signal <$add0010> created at line 47.
+    Found 32-bit adder for signal <$add0011> created at line 47.
+    Found 32-bit adder for signal <$add0012> created at line 47.
+    Found 32-bit adder for signal <$add0013> created at line 47.
+    Found 32-bit adder for signal <$add0014> created at line 47.
+    Found 32-bit subtractor for signal <$sub0000> created at line 48.
+    Found 32-bit subtractor for signal <$sub0001> created at line 48.
+    Found 32-bit subtractor for signal <$sub0002> created at line 48.
+    Found 32-bit subtractor for signal <$sub0003> created at line 48.
+    Found 32-bit subtractor for signal <$sub0004> created at line 48.
+    Found 32-bit subtractor for signal <$sub0005> created at line 48.
+    Found 32-bit subtractor for signal <$sub0006> created at line 48.
+    Found 32-bit subtractor for signal <$sub0007> created at line 48.
+    Found 32-bit subtractor for signal <$sub0008> created at line 48.
+    Found 32-bit subtractor for signal <$sub0009> created at line 48.
+    Found 32-bit subtractor for signal <$sub0010> created at line 48.
+    Found 32-bit subtractor for signal <$sub0011> created at line 48.
+    Found 32-bit subtractor for signal <$sub0012> created at line 48.
+    Found 32-bit subtractor for signal <$sub0013> created at line 48.
+    Found 32-bit subtractor for signal <$sub0014> created at line 48.
+    Found 32-bit comparator less for signal <old_b_1$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_10$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_11$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_12$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_13$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_14$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_15$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_16$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_2$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_3$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_4$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_5$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_6$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_7$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_8$cmp_gt0000> created at line 39.
+    Found 32-bit comparator greater for signal <old_b_9$cmp_gt0000> created at line 39.
+    Found 33-bit comparator greatequal for signal <old_res_18$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_21$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_21$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_24$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_24$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_27$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_27$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_30$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_30$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_33$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_33$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_36$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_36$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_39$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_39$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_42$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_42$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_45$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_45$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_48$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_48$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_51$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_51$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_54$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_54$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_57$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_57$cmp_ge0000> created at line 47.
+    Found 32-bit adder for signal <old_res_60$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_res_60$cmp_ge0000> created at line 47.
+    Found 32-bit 4-to-1 multiplexer for signal <res>.
+    Found 32-bit adder for signal <res$addsub0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <res$cmp_ge0000> created at line 47.
+    Summary:
+	inferred  45 Adder/Subtractor(s).
+	inferred  32 Comparator(s).
+	inferred 512 Multiplexer(s).
+Unit <square_root> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 45
+ 32-bit adder                                          : 30
+ 32-bit subtractor                                     : 15
+# Comparators                                          : 32
+ 32-bit comparator greatequal                          : 15
+ 32-bit comparator greater                             : 15
+ 32-bit comparator less                                : 1
+ 33-bit comparator greatequal                          : 1
+# Multiplexers                                         : 16
+ 32-bit 4-to-1 multiplexer                             : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 45
+ 32-bit adder                                          : 30
+ 32-bit subtractor                                     : 15
+# Comparators                                          : 32
+ 32-bit comparator greatequal                          : 15
+ 32-bit comparator greater                             : 15
+ 32-bit comparator less                                : 1
+ 33-bit comparator greatequal                          : 1
+# Multiplexers                                         : 16
+ 32-bit 4-to-1 multiplexer                             : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <square_root> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block square_root, actual ratio is 47.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : square_root.ngr
+Top Level Output File Name         : square_root
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 24
+
+Cell Usage :
+# BELS                             : 7430
+#      GND                         : 1
+#      INV                         : 60
+#      LUT2                        : 96
+#      LUT3                        : 2079
+#      LUT4                        : 1648
+#      MULT_AND                    : 77
+#      MUXCY                       : 2077
+#      MUXF5                       : 29
+#      VCC                         : 1
+#      XORCY                       : 1362
+# IO Buffers                       : 24
+#      IBUF                        : 8
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     2151  out of   4656    46%  
+ Number of 4 input LUTs:               3883  out of   9312    41%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    232    10%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 212.748ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1101337904404463900000000000000000000000000000000000000000000 / 16
+-------------------------------------------------------------------------
+Delay:               212.748ns (Levels of Logic = 724)
+  Source:            in<6> (PAD)
+  Destination:       out<15> (PAD)
+
+  Data Path: in<6> to out<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            26   1.218   1.435  in_6_IBUF (in_6_IBUF)
+     LUT2:I0->O            5   0.704   0.712  _old_b_3<28>11 (N15)
+     LUT4:I1->O            9   0.704   0.899  _old_b_3<24>1 (_old_b_3<24>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_4_cmp_gt0000_lut<0> (Mcompar_old_b_4_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_4_cmp_gt0000_cy<0> (Mcompar_old_b_4_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_4_cmp_gt0000_cy<1> (Mcompar_old_b_4_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_4_cmp_gt0000_cy<2> (Mcompar_old_b_4_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_4_cmp_gt0000_cy<3> (Mcompar_old_b_4_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_4_cmp_gt0000_cy<4> (Mcompar_old_b_4_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_4_cmp_gt0000_cy<5> (Mcompar_old_b_4_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_4_cmp_gt0000_cy<6> (Mcompar_old_b_4_cmp_gt0000_cy<6>)
+     MUXCY:CI->O          18   0.459   1.243  Mcompar_old_b_4_cmp_gt0000_cy<7> (Mcompar_old_b_4_cmp_gt0000_cy<7>)
+     LUT4:I0->O            1   0.704   0.424  _old_b_4<24>_SW1 (N1265)
+     LUT4:I3->O            7   0.704   0.787  _old_b_4<24> (_old_b_4<24>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_5_cmp_gt0000_lut<2> (Mcompar_old_b_5_cmp_gt0000_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_5_cmp_gt0000_cy<2> (Mcompar_old_b_5_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_5_cmp_gt0000_cy<3> (Mcompar_old_b_5_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_5_cmp_gt0000_cy<4> (Mcompar_old_b_5_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_5_cmp_gt0000_cy<5> (Mcompar_old_b_5_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_5_cmp_gt0000_cy<6> (Mcompar_old_b_5_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_5_cmp_gt0000_cy<7> (Mcompar_old_b_5_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_5_cmp_gt0000_cy<8> (Mcompar_old_b_5_cmp_gt0000_cy<8>)
+     MUXCY:CI->O          21   0.459   1.207  Mcompar_old_b_5_cmp_gt0000_cy<9> (Mcompar_old_b_5_cmp_gt0000_cy<9>)
+     LUT4:I1->O            6   0.704   0.748  _old_b_5<28>1 (_old_b_5<28>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_6_cmp_gt0000_lut<8> (Mcompar_old_b_6_cmp_gt0000_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_6_cmp_gt0000_cy<8> (Mcompar_old_b_6_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_6_cmp_gt0000_cy<9> (Mcompar_old_b_6_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_6_cmp_gt0000_cy<10> (Mcompar_old_b_6_cmp_gt0000_cy<10>)
+     MUXCY:CI->O          22   0.459   1.339  Mcompar_old_b_6_cmp_gt0000_cy<11> (Mcompar_old_b_6_cmp_gt0000_cy<11>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_b_7_cmp_gt0000_lut<2> (Mcompar_old_b_7_cmp_gt0000_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_7_cmp_gt0000_cy<2> (Mcompar_old_b_7_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<3> (Mcompar_old_b_7_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<4> (Mcompar_old_b_7_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<5> (Mcompar_old_b_7_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<6> (Mcompar_old_b_7_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<7> (Mcompar_old_b_7_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<8> (Mcompar_old_b_7_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<9> (Mcompar_old_b_7_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<10> (Mcompar_old_b_7_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<11> (Mcompar_old_b_7_cmp_gt0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_7_cmp_gt0000_cy<12> (Mcompar_old_b_7_cmp_gt0000_cy<12>)
+     MUXCY:CI->O          23   0.459   1.281  Mcompar_old_b_7_cmp_gt0000_cy<13> (Mcompar_old_b_7_cmp_gt0000_cy<13>)
+     LUT4:I1->O            6   0.704   0.748  _old_b_7<28>1 (_old_b_7<28>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_8_cmp_gt0000_lut<12> (Mcompar_old_b_8_cmp_gt0000_lut<12>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_8_cmp_gt0000_cy<12> (Mcompar_old_b_8_cmp_gt0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_8_cmp_gt0000_cy<13> (Mcompar_old_b_8_cmp_gt0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_8_cmp_gt0000_cy<14> (Mcompar_old_b_8_cmp_gt0000_cy<14>)
+     MUXCY:CI->O          26   0.459   1.435  Mcompar_old_b_8_cmp_gt0000_cy<15> (Mcompar_old_b_8_cmp_gt0000_cy<15>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_b_9_cmp_gt0000_lut<2> (Mcompar_old_b_9_cmp_gt0000_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_9_cmp_gt0000_cy<2> (Mcompar_old_b_9_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<3> (Mcompar_old_b_9_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<4> (Mcompar_old_b_9_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<5> (Mcompar_old_b_9_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<6> (Mcompar_old_b_9_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<7> (Mcompar_old_b_9_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<8> (Mcompar_old_b_9_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<9> (Mcompar_old_b_9_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<10> (Mcompar_old_b_9_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<11> (Mcompar_old_b_9_cmp_gt0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<12> (Mcompar_old_b_9_cmp_gt0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<13> (Mcompar_old_b_9_cmp_gt0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<14> (Mcompar_old_b_9_cmp_gt0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<15> (Mcompar_old_b_9_cmp_gt0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_9_cmp_gt0000_cy<16> (Mcompar_old_b_9_cmp_gt0000_cy<16>)
+     MUXCY:CI->O          27   0.459   1.340  Mcompar_old_b_9_cmp_gt0000_cy<17> (Mcompar_old_b_9_cmp_gt0000_cy<17>)
+     LUT4:I1->O            6   0.704   0.748  _old_b_9<28>1 (_old_b_9<28>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_10_cmp_gt0000_lut<16> (Mcompar_old_b_10_cmp_gt0000_lut<16>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_10_cmp_gt0000_cy<16> (Mcompar_old_b_10_cmp_gt0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_10_cmp_gt0000_cy<17> (Mcompar_old_b_10_cmp_gt0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_10_cmp_gt0000_cy<18> (Mcompar_old_b_10_cmp_gt0000_cy<18>)
+     MUXCY:CI->O          30   0.459   1.437  Mcompar_old_b_10_cmp_gt0000_cy<19> (Mcompar_old_b_10_cmp_gt0000_cy<19>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_b_11_cmp_gt0000_lut<2> (Mcompar_old_b_11_cmp_gt0000_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_11_cmp_gt0000_cy<2> (Mcompar_old_b_11_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<3> (Mcompar_old_b_11_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<4> (Mcompar_old_b_11_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<5> (Mcompar_old_b_11_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<6> (Mcompar_old_b_11_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<7> (Mcompar_old_b_11_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<8> (Mcompar_old_b_11_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<9> (Mcompar_old_b_11_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<10> (Mcompar_old_b_11_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<11> (Mcompar_old_b_11_cmp_gt0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<12> (Mcompar_old_b_11_cmp_gt0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<13> (Mcompar_old_b_11_cmp_gt0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<14> (Mcompar_old_b_11_cmp_gt0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<15> (Mcompar_old_b_11_cmp_gt0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<16> (Mcompar_old_b_11_cmp_gt0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<17> (Mcompar_old_b_11_cmp_gt0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<18> (Mcompar_old_b_11_cmp_gt0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<19> (Mcompar_old_b_11_cmp_gt0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_11_cmp_gt0000_cy<20> (Mcompar_old_b_11_cmp_gt0000_cy<20>)
+     MUXCY:CI->O          31   0.459   1.341  Mcompar_old_b_11_cmp_gt0000_cy<21> (Mcompar_old_b_11_cmp_gt0000_cy<21>)
+     LUT4:I1->O            6   0.704   0.748  _old_b_11<28>1 (_old_b_11<28>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_12_cmp_gt0000_lut<20> (Mcompar_old_b_12_cmp_gt0000_lut<20>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_12_cmp_gt0000_cy<20> (Mcompar_old_b_12_cmp_gt0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_12_cmp_gt0000_cy<21> (Mcompar_old_b_12_cmp_gt0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_12_cmp_gt0000_cy<22> (Mcompar_old_b_12_cmp_gt0000_cy<22>)
+     MUXCY:CI->O          34   0.459   1.438  Mcompar_old_b_12_cmp_gt0000_cy<23> (Mcompar_old_b_12_cmp_gt0000_cy<23>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_b_13_cmp_gt0000_lut<2> (Mcompar_old_b_13_cmp_gt0000_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_13_cmp_gt0000_cy<2> (Mcompar_old_b_13_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<3> (Mcompar_old_b_13_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<4> (Mcompar_old_b_13_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<5> (Mcompar_old_b_13_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<6> (Mcompar_old_b_13_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<7> (Mcompar_old_b_13_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<8> (Mcompar_old_b_13_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<9> (Mcompar_old_b_13_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<10> (Mcompar_old_b_13_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<11> (Mcompar_old_b_13_cmp_gt0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<12> (Mcompar_old_b_13_cmp_gt0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<13> (Mcompar_old_b_13_cmp_gt0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<14> (Mcompar_old_b_13_cmp_gt0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<15> (Mcompar_old_b_13_cmp_gt0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<16> (Mcompar_old_b_13_cmp_gt0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<17> (Mcompar_old_b_13_cmp_gt0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<18> (Mcompar_old_b_13_cmp_gt0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<19> (Mcompar_old_b_13_cmp_gt0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<20> (Mcompar_old_b_13_cmp_gt0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<21> (Mcompar_old_b_13_cmp_gt0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<22> (Mcompar_old_b_13_cmp_gt0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<23> (Mcompar_old_b_13_cmp_gt0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_13_cmp_gt0000_cy<24> (Mcompar_old_b_13_cmp_gt0000_cy<24>)
+     MUXCY:CI->O          35   0.459   1.342  Mcompar_old_b_13_cmp_gt0000_cy<25> (Mcompar_old_b_13_cmp_gt0000_cy<25>)
+     LUT4:I1->O            6   0.704   0.748  _old_b_13<28>1 (_old_b_13<28>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_14_cmp_gt0000_lut<24> (Mcompar_old_b_14_cmp_gt0000_lut<24>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_14_cmp_gt0000_cy<24> (Mcompar_old_b_14_cmp_gt0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_14_cmp_gt0000_cy<25> (Mcompar_old_b_14_cmp_gt0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_14_cmp_gt0000_cy<26> (Mcompar_old_b_14_cmp_gt0000_cy<26>)
+     MUXCY:CI->O          35   0.459   1.438  Mcompar_old_b_14_cmp_gt0000_cy<27> (Mcompar_old_b_14_cmp_gt0000_cy<27>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_b_15_cmp_gt0000_lut<2> (Mcompar_old_b_15_cmp_gt0000_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_15_cmp_gt0000_cy<2> (Mcompar_old_b_15_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<3> (Mcompar_old_b_15_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<4> (Mcompar_old_b_15_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<5> (Mcompar_old_b_15_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<6> (Mcompar_old_b_15_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<7> (Mcompar_old_b_15_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<8> (Mcompar_old_b_15_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<9> (Mcompar_old_b_15_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<10> (Mcompar_old_b_15_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<11> (Mcompar_old_b_15_cmp_gt0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<12> (Mcompar_old_b_15_cmp_gt0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<13> (Mcompar_old_b_15_cmp_gt0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<14> (Mcompar_old_b_15_cmp_gt0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<15> (Mcompar_old_b_15_cmp_gt0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<16> (Mcompar_old_b_15_cmp_gt0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<17> (Mcompar_old_b_15_cmp_gt0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<18> (Mcompar_old_b_15_cmp_gt0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<19> (Mcompar_old_b_15_cmp_gt0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<20> (Mcompar_old_b_15_cmp_gt0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<21> (Mcompar_old_b_15_cmp_gt0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<22> (Mcompar_old_b_15_cmp_gt0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<23> (Mcompar_old_b_15_cmp_gt0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<24> (Mcompar_old_b_15_cmp_gt0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<25> (Mcompar_old_b_15_cmp_gt0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<26> (Mcompar_old_b_15_cmp_gt0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<27> (Mcompar_old_b_15_cmp_gt0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_15_cmp_gt0000_cy<28> (Mcompar_old_b_15_cmp_gt0000_cy<28>)
+     MUXCY:CI->O          41   0.459   1.344  Mcompar_old_b_15_cmp_gt0000_cy<29> (Mcompar_old_b_15_cmp_gt0000_cy<29>)
+     LUT4:I1->O           17   0.704   1.130  _old_b_15<28>1 (_old_b_15<28>)
+     LUT2:I1->O            1   0.704   0.000  Mcompar_old_b_16_cmp_gt0000_lut<28> (Mcompar_old_b_16_cmp_gt0000_lut<28>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_b_16_cmp_gt0000_cy<28> (Mcompar_old_b_16_cmp_gt0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_16_cmp_gt0000_cy<29> (Mcompar_old_b_16_cmp_gt0000_cy<29>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_b_16_cmp_gt0000_cy<30> (Mcompar_old_b_16_cmp_gt0000_cy<30>)
+     MUXCY:CI->O         107   0.459   1.461  Mcompar_old_b_16_cmp_gt0000_cy<31> (Mcompar_old_b_16_cmp_gt0000_cy<31>)
+     LUT3:I0->O           21   0.704   1.303  _old_b_16<20>1 (_old_b_16<20>)
+     LUT3:I0->O            1   0.704   0.424  old_b_17_and00001_SW0 (N1163)
+     LUT4:I3->O           99   0.704   1.458  old_b_17_and00001 (old_b_41_and0000)
+     LUT3:I0->O           66   0.704   1.448  old_b_17_and0000211 (old_b_35_and0000)
+     LUT3:I0->O           72   0.704   1.450  old_b_17_and000021 (old_b_29_and0000)
+     LUT3:I0->O          105   0.704   1.320  old_b_17_and000031 (old_b_23_and0000)
+     LUT3:I2->O           15   0.704   1.017  Mmux__not00001 (Mmux__not0000)
+     MULT_AND:I0->LO       0   0.741   0.000  _old_res_18<0>_mand (_old_res_18<0>_mand1)
+     MUXCY:DI->O           2   1.288   0.526  Madd__add0000_cy<0> (Madd__add0000_cy<0>)
+     LUT3:I1->O            1   0.704   0.000  Mcompar_old_res_21_cmp_ge0000_lut<1> (Mcompar_old_res_21_cmp_ge0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_old_res_21_cmp_ge0000_cy<1> (Mcompar_old_res_21_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<2> (Mcompar_old_res_21_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<3> (Mcompar_old_res_21_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<4> (Mcompar_old_res_21_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<5> (Mcompar_old_res_21_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<6> (Mcompar_old_res_21_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<7> (Mcompar_old_res_21_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<8> (Mcompar_old_res_21_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<9> (Mcompar_old_res_21_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<10> (Mcompar_old_res_21_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<11> (Mcompar_old_res_21_cmp_ge0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<12> (Mcompar_old_res_21_cmp_ge0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<13> (Mcompar_old_res_21_cmp_ge0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<14> (Mcompar_old_res_21_cmp_ge0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<15> (Mcompar_old_res_21_cmp_ge0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<16> (Mcompar_old_res_21_cmp_ge0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<17> (Mcompar_old_res_21_cmp_ge0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<18> (Mcompar_old_res_21_cmp_ge0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<19> (Mcompar_old_res_21_cmp_ge0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<20> (Mcompar_old_res_21_cmp_ge0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<21> (Mcompar_old_res_21_cmp_ge0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<22> (Mcompar_old_res_21_cmp_ge0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<23> (Mcompar_old_res_21_cmp_ge0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<24> (Mcompar_old_res_21_cmp_ge0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<25> (Mcompar_old_res_21_cmp_ge0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<26> (Mcompar_old_res_21_cmp_ge0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<27> (Mcompar_old_res_21_cmp_ge0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<28> (Mcompar_old_res_21_cmp_ge0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<29> (Mcompar_old_res_21_cmp_ge0000_cy<29>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_old_res_21_cmp_ge0000_cy<30> (Mcompar_old_res_21_cmp_ge0000_cy<30>)
+     MUXCY:CI->O          39   0.459   1.343  Mcompar_old_res_21_cmp_ge0000_cy<31> (old_res_21_cmp_ge0000)
+     LUT4:I1->O            3   0.704   0.706  Mmux__old_res_2111 (_old_res_21<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0001_lut<0> (Madd__add0001_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0001_cy<0> (Madd__add0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<1> (Madd__add0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<2> (Madd__add0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<3> (Madd__add0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<4> (Madd__add0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<5> (Madd__add0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<6> (Madd__add0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<7> (Madd__add0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<8> (Madd__add0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<9> (Madd__add0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<10> (Madd__add0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<11> (Madd__add0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<12> (Madd__add0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<13> (Madd__add0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<14> (Madd__add0001_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<15> (Madd__add0001_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<16> (Madd__add0001_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<17> (Madd__add0001_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<18> (Madd__add0001_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<19> (Madd__add0001_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<20> (Madd__add0001_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<21> (Madd__add0001_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<22> (Madd__add0001_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<23> (Madd__add0001_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<24> (Madd__add0001_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<25> (Madd__add0001_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<26> (Madd__add0001_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<27> (Madd__add0001_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<28> (Madd__add0001_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0001_cy<29> (Madd__add0001_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0001_cy<30> (Madd__add0001_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0001_xor<31> (_add0001<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_24_cmp_ge0000_lut<31> (Mcompar_old_res_24_cmp_ge0000_lut<31>)
+     MUXCY:S->O           91   0.864   1.281  Mcompar_old_res_24_cmp_ge0000_cy<31> (old_res_24_cmp_ge0000)
+     MUXF5:S->O            3   0.739   0.706  Mmux__old_res_242_f5 (_old_res_24<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0002_lut<0> (Madd__add0002_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0002_cy<0> (Madd__add0002_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<1> (Madd__add0002_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<2> (Madd__add0002_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<3> (Madd__add0002_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<4> (Madd__add0002_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<5> (Madd__add0002_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<6> (Madd__add0002_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<7> (Madd__add0002_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<8> (Madd__add0002_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<9> (Madd__add0002_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<10> (Madd__add0002_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<11> (Madd__add0002_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<12> (Madd__add0002_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<13> (Madd__add0002_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<14> (Madd__add0002_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<15> (Madd__add0002_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<16> (Madd__add0002_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<17> (Madd__add0002_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<18> (Madd__add0002_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<19> (Madd__add0002_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<20> (Madd__add0002_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<21> (Madd__add0002_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<22> (Madd__add0002_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<23> (Madd__add0002_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<24> (Madd__add0002_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<25> (Madd__add0002_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<26> (Madd__add0002_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<27> (Madd__add0002_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<28> (Madd__add0002_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0002_cy<29> (Madd__add0002_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0002_cy<30> (Madd__add0002_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0002_xor<31> (_add0002<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_27_cmp_ge0000_lut<31> (Mcompar_old_res_27_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_27_cmp_ge0000_cy<31> (old_res_27_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_2721 (Mmux__old_res_272)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_272_f5 (_old_res_27<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0003_lut<0> (Madd__add0003_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0003_cy<0> (Madd__add0003_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<1> (Madd__add0003_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<2> (Madd__add0003_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<3> (Madd__add0003_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<4> (Madd__add0003_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<5> (Madd__add0003_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<6> (Madd__add0003_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<7> (Madd__add0003_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<8> (Madd__add0003_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<9> (Madd__add0003_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<10> (Madd__add0003_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<11> (Madd__add0003_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<12> (Madd__add0003_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<13> (Madd__add0003_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<14> (Madd__add0003_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<15> (Madd__add0003_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<16> (Madd__add0003_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<17> (Madd__add0003_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<18> (Madd__add0003_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<19> (Madd__add0003_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<20> (Madd__add0003_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<21> (Madd__add0003_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<22> (Madd__add0003_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<23> (Madd__add0003_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<24> (Madd__add0003_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<25> (Madd__add0003_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<26> (Madd__add0003_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<27> (Madd__add0003_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<28> (Madd__add0003_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0003_cy<29> (Madd__add0003_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0003_cy<30> (Madd__add0003_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0003_xor<31> (_add0003<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_30_cmp_ge0000_lut<31> (Mcompar_old_res_30_cmp_ge0000_lut<31>)
+     MUXCY:S->O           92   0.864   1.285  Mcompar_old_res_30_cmp_ge0000_cy<31> (old_res_30_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_3021 (Mmux__old_res_302)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_302_f5 (_old_res_30<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0004_lut<0> (Madd__add0004_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0004_cy<0> (Madd__add0004_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<1> (Madd__add0004_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<2> (Madd__add0004_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<3> (Madd__add0004_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<4> (Madd__add0004_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<5> (Madd__add0004_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<6> (Madd__add0004_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<7> (Madd__add0004_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<8> (Madd__add0004_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<9> (Madd__add0004_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<10> (Madd__add0004_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<11> (Madd__add0004_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<12> (Madd__add0004_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<13> (Madd__add0004_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<14> (Madd__add0004_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<15> (Madd__add0004_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<16> (Madd__add0004_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<17> (Madd__add0004_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<18> (Madd__add0004_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<19> (Madd__add0004_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<20> (Madd__add0004_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<21> (Madd__add0004_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<22> (Madd__add0004_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<23> (Madd__add0004_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<24> (Madd__add0004_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<25> (Madd__add0004_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<26> (Madd__add0004_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<27> (Madd__add0004_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<28> (Madd__add0004_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0004_cy<29> (Madd__add0004_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0004_cy<30> (Madd__add0004_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0004_xor<31> (_add0004<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_33_cmp_ge0000_lut<31> (Mcompar_old_res_33_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_33_cmp_ge0000_cy<31> (old_res_33_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_3321 (Mmux__old_res_332)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_332_f5 (_old_res_33<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0005_lut<0> (Madd__add0005_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0005_cy<0> (Madd__add0005_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<1> (Madd__add0005_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<2> (Madd__add0005_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<3> (Madd__add0005_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<4> (Madd__add0005_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<5> (Madd__add0005_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<6> (Madd__add0005_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<7> (Madd__add0005_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<8> (Madd__add0005_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<9> (Madd__add0005_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<10> (Madd__add0005_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<11> (Madd__add0005_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<12> (Madd__add0005_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<13> (Madd__add0005_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<14> (Madd__add0005_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<15> (Madd__add0005_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<16> (Madd__add0005_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<17> (Madd__add0005_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<18> (Madd__add0005_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<19> (Madd__add0005_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<20> (Madd__add0005_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<21> (Madd__add0005_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<22> (Madd__add0005_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<23> (Madd__add0005_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<24> (Madd__add0005_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<25> (Madd__add0005_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<26> (Madd__add0005_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<27> (Madd__add0005_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<28> (Madd__add0005_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0005_cy<29> (Madd__add0005_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0005_cy<30> (Madd__add0005_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0005_xor<31> (_add0005<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_36_cmp_ge0000_lut<31> (Mcompar_old_res_36_cmp_ge0000_lut<31>)
+     MUXCY:S->O           92   0.864   1.285  Mcompar_old_res_36_cmp_ge0000_cy<31> (old_res_36_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_3621 (Mmux__old_res_362)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_362_f5 (_old_res_36<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0006_lut<0> (Madd__add0006_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0006_cy<0> (Madd__add0006_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<1> (Madd__add0006_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<2> (Madd__add0006_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<3> (Madd__add0006_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<4> (Madd__add0006_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<5> (Madd__add0006_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<6> (Madd__add0006_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<7> (Madd__add0006_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<8> (Madd__add0006_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<9> (Madd__add0006_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<10> (Madd__add0006_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<11> (Madd__add0006_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<12> (Madd__add0006_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<13> (Madd__add0006_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<14> (Madd__add0006_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<15> (Madd__add0006_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<16> (Madd__add0006_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<17> (Madd__add0006_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<18> (Madd__add0006_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<19> (Madd__add0006_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<20> (Madd__add0006_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<21> (Madd__add0006_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<22> (Madd__add0006_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<23> (Madd__add0006_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<24> (Madd__add0006_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<25> (Madd__add0006_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<26> (Madd__add0006_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<27> (Madd__add0006_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<28> (Madd__add0006_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0006_cy<29> (Madd__add0006_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0006_cy<30> (Madd__add0006_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0006_xor<31> (_add0006<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_39_cmp_ge0000_lut<31> (Mcompar_old_res_39_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_39_cmp_ge0000_cy<31> (old_res_39_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_3921 (Mmux__old_res_392)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_392_f5 (_old_res_39<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0007_lut<0> (Madd__add0007_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0007_cy<0> (Madd__add0007_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<1> (Madd__add0007_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<2> (Madd__add0007_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<3> (Madd__add0007_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<4> (Madd__add0007_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<5> (Madd__add0007_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<6> (Madd__add0007_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<7> (Madd__add0007_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<8> (Madd__add0007_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<9> (Madd__add0007_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<10> (Madd__add0007_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<11> (Madd__add0007_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<12> (Madd__add0007_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<13> (Madd__add0007_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<14> (Madd__add0007_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<15> (Madd__add0007_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<16> (Madd__add0007_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<17> (Madd__add0007_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<18> (Madd__add0007_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<19> (Madd__add0007_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<20> (Madd__add0007_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<21> (Madd__add0007_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<22> (Madd__add0007_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<23> (Madd__add0007_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<24> (Madd__add0007_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<25> (Madd__add0007_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<26> (Madd__add0007_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<27> (Madd__add0007_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<28> (Madd__add0007_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0007_cy<29> (Madd__add0007_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0007_cy<30> (Madd__add0007_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0007_xor<31> (_add0007<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_42_cmp_ge0000_lut<31> (Mcompar_old_res_42_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_42_cmp_ge0000_cy<31> (old_res_42_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_4221 (Mmux__old_res_422)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_422_f5 (_old_res_42<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0008_lut<0> (Madd__add0008_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0008_cy<0> (Madd__add0008_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<1> (Madd__add0008_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<2> (Madd__add0008_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<3> (Madd__add0008_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<4> (Madd__add0008_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<5> (Madd__add0008_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<6> (Madd__add0008_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<7> (Madd__add0008_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<8> (Madd__add0008_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<9> (Madd__add0008_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<10> (Madd__add0008_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<11> (Madd__add0008_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<12> (Madd__add0008_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<13> (Madd__add0008_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<14> (Madd__add0008_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<15> (Madd__add0008_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<16> (Madd__add0008_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<17> (Madd__add0008_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<18> (Madd__add0008_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<19> (Madd__add0008_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<20> (Madd__add0008_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<21> (Madd__add0008_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<22> (Madd__add0008_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<23> (Madd__add0008_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<24> (Madd__add0008_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<25> (Madd__add0008_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<26> (Madd__add0008_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<27> (Madd__add0008_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<28> (Madd__add0008_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0008_cy<29> (Madd__add0008_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0008_cy<30> (Madd__add0008_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0008_xor<31> (_add0008<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_45_cmp_ge0000_lut<31> (Mcompar_old_res_45_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_45_cmp_ge0000_cy<31> (old_res_45_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_4521 (Mmux__old_res_452)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_452_f5 (_old_res_45<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0009_lut<0> (Madd__add0009_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0009_cy<0> (Madd__add0009_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<1> (Madd__add0009_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<2> (Madd__add0009_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<3> (Madd__add0009_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<4> (Madd__add0009_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<5> (Madd__add0009_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<6> (Madd__add0009_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<7> (Madd__add0009_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<8> (Madd__add0009_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<9> (Madd__add0009_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<10> (Madd__add0009_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<11> (Madd__add0009_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<12> (Madd__add0009_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<13> (Madd__add0009_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<14> (Madd__add0009_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<15> (Madd__add0009_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<16> (Madd__add0009_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<17> (Madd__add0009_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<18> (Madd__add0009_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<19> (Madd__add0009_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<20> (Madd__add0009_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<21> (Madd__add0009_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<22> (Madd__add0009_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<23> (Madd__add0009_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<24> (Madd__add0009_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<25> (Madd__add0009_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<26> (Madd__add0009_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<27> (Madd__add0009_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<28> (Madd__add0009_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0009_cy<29> (Madd__add0009_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0009_cy<30> (Madd__add0009_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0009_xor<31> (_add0009<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_48_cmp_ge0000_lut<31> (Mcompar_old_res_48_cmp_ge0000_lut<31>)
+     MUXCY:S->O           92   0.864   1.285  Mcompar_old_res_48_cmp_ge0000_cy<31> (old_res_48_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_4821 (Mmux__old_res_482)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_482_f5 (_old_res_48<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0010_lut<0> (Madd__add0010_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0010_cy<0> (Madd__add0010_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<1> (Madd__add0010_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<2> (Madd__add0010_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<3> (Madd__add0010_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<4> (Madd__add0010_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<5> (Madd__add0010_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<6> (Madd__add0010_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<7> (Madd__add0010_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<8> (Madd__add0010_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<9> (Madd__add0010_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<10> (Madd__add0010_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<11> (Madd__add0010_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<12> (Madd__add0010_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<13> (Madd__add0010_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<14> (Madd__add0010_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<15> (Madd__add0010_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<16> (Madd__add0010_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<17> (Madd__add0010_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<18> (Madd__add0010_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<19> (Madd__add0010_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<20> (Madd__add0010_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<21> (Madd__add0010_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<22> (Madd__add0010_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<23> (Madd__add0010_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<24> (Madd__add0010_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<25> (Madd__add0010_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<26> (Madd__add0010_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<27> (Madd__add0010_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<28> (Madd__add0010_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0010_cy<29> (Madd__add0010_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0010_cy<30> (Madd__add0010_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0010_xor<31> (_add0010<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_51_cmp_ge0000_lut<31> (Mcompar_old_res_51_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_51_cmp_ge0000_cy<31> (old_res_51_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_5121 (Mmux__old_res_512)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_512_f5 (_old_res_51<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0011_lut<0> (Madd__add0011_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0011_cy<0> (Madd__add0011_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<1> (Madd__add0011_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<2> (Madd__add0011_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<3> (Madd__add0011_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<4> (Madd__add0011_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<5> (Madd__add0011_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<6> (Madd__add0011_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<7> (Madd__add0011_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<8> (Madd__add0011_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<9> (Madd__add0011_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<10> (Madd__add0011_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<11> (Madd__add0011_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<12> (Madd__add0011_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<13> (Madd__add0011_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<14> (Madd__add0011_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<15> (Madd__add0011_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<16> (Madd__add0011_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<17> (Madd__add0011_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<18> (Madd__add0011_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<19> (Madd__add0011_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<20> (Madd__add0011_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<21> (Madd__add0011_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<22> (Madd__add0011_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<23> (Madd__add0011_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<24> (Madd__add0011_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<25> (Madd__add0011_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<26> (Madd__add0011_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<27> (Madd__add0011_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<28> (Madd__add0011_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0011_cy<29> (Madd__add0011_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0011_cy<30> (Madd__add0011_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0011_xor<31> (_add0011<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_54_cmp_ge0000_lut<31> (Mcompar_old_res_54_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_54_cmp_ge0000_cy<31> (old_res_54_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_5421 (Mmux__old_res_542)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_542_f5 (_old_res_54<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0012_lut<0> (Madd__add0012_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0012_cy<0> (Madd__add0012_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<1> (Madd__add0012_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<2> (Madd__add0012_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<3> (Madd__add0012_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<4> (Madd__add0012_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<5> (Madd__add0012_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<6> (Madd__add0012_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<7> (Madd__add0012_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<8> (Madd__add0012_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<9> (Madd__add0012_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<10> (Madd__add0012_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<11> (Madd__add0012_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<12> (Madd__add0012_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<13> (Madd__add0012_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<14> (Madd__add0012_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<15> (Madd__add0012_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<16> (Madd__add0012_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<17> (Madd__add0012_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<18> (Madd__add0012_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<19> (Madd__add0012_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<20> (Madd__add0012_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<21> (Madd__add0012_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<22> (Madd__add0012_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<23> (Madd__add0012_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<24> (Madd__add0012_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<25> (Madd__add0012_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<26> (Madd__add0012_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<27> (Madd__add0012_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<28> (Madd__add0012_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0012_cy<29> (Madd__add0012_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0012_cy<30> (Madd__add0012_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0012_xor<31> (_add0012<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_57_cmp_ge0000_lut<31> (Mcompar_old_res_57_cmp_ge0000_lut<31>)
+     MUXCY:S->O          124   0.864   1.295  Mcompar_old_res_57_cmp_ge0000_cy<31> (old_res_57_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_5721 (Mmux__old_res_572)
+     MUXF5:I1->O           3   0.321   0.706  Mmux__old_res_572_f5 (_old_res_57<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0013_lut<0> (Madd__add0013_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0013_cy<0> (Madd__add0013_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<1> (Madd__add0013_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<2> (Madd__add0013_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<3> (Madd__add0013_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<4> (Madd__add0013_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<5> (Madd__add0013_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<6> (Madd__add0013_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<7> (Madd__add0013_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<8> (Madd__add0013_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<9> (Madd__add0013_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<10> (Madd__add0013_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<11> (Madd__add0013_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<12> (Madd__add0013_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<13> (Madd__add0013_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<14> (Madd__add0013_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<15> (Madd__add0013_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<16> (Madd__add0013_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<17> (Madd__add0013_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<18> (Madd__add0013_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<19> (Madd__add0013_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<20> (Madd__add0013_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<21> (Madd__add0013_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<22> (Madd__add0013_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<23> (Madd__add0013_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<24> (Madd__add0013_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<25> (Madd__add0013_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<26> (Madd__add0013_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<27> (Madd__add0013_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<28> (Madd__add0013_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0013_cy<29> (Madd__add0013_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0013_cy<30> (Madd__add0013_cy<30>)
+     XORCY:CI->O           2   0.804   0.622  Madd__add0013_xor<31> (_add0013<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_old_res_60_cmp_ge0000_lut<31> (Mcompar_old_res_60_cmp_ge0000_lut<31>)
+     MUXCY:S->O          117   0.864   1.293  Mcompar_old_res_60_cmp_ge0000_cy<31> (old_res_60_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  Mmux__old_res_6021 (Mmux__old_res_602)
+     MUXF5:I1->O           1   0.321   0.595  Mmux__old_res_602_f5 (_old_res_60<0>)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0014_lut<0> (Madd__add0014_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0014_cy<0> (Madd__add0014_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<1> (Madd__add0014_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<2> (Madd__add0014_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<3> (Madd__add0014_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<4> (Madd__add0014_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<5> (Madd__add0014_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<6> (Madd__add0014_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<7> (Madd__add0014_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<8> (Madd__add0014_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<9> (Madd__add0014_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<10> (Madd__add0014_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<11> (Madd__add0014_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<12> (Madd__add0014_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<13> (Madd__add0014_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<14> (Madd__add0014_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<15> (Madd__add0014_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<16> (Madd__add0014_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<17> (Madd__add0014_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<18> (Madd__add0014_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<19> (Madd__add0014_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<20> (Madd__add0014_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<21> (Madd__add0014_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<22> (Madd__add0014_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<23> (Madd__add0014_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<24> (Madd__add0014_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<25> (Madd__add0014_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<26> (Madd__add0014_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<27> (Madd__add0014_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<28> (Madd__add0014_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0014_cy<29> (Madd__add0014_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0014_cy<30> (Madd__add0014_cy<30>)
+     XORCY:CI->O           1   0.804   0.595  Madd__add0014_xor<31> (_add0014<31>)
+     LUT4:I0->O            1   0.704   0.000  Mcompar_res_cmp_ge0000_lut<31> (Mcompar_res_cmp_ge0000_lut<31>)
+     MUXCY:S->O           16   0.864   1.209  Mcompar_res_cmp_ge0000_cy<31> (res_cmp_ge0000)
+     LUT3:I0->O            1   0.704   0.000  Mmux_res8_G (N1268)
+     MUXF5:I1->O           1   0.321   0.420  Mmux_res8 (out_12_OBUF)
+     OBUF:I->O                 3.272          out_12_OBUF (out<12>)
+    ----------------------------------------
+    Total                    212.748ns (138.811ns logic, 73.937ns route)
+                                       (65.2% logic, 34.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.52 secs
+ 
+--> 
+
+Total memory usage is 4616496 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
