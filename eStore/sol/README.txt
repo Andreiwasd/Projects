@@ -1,59 +1,106 @@
-	Programul trece cu succes de primele 9 teste ale checker-ului (primele 3 cerinte). A patra cerinta este rezolvata partial,
-	reusind sa stocheze intr-o lista primele 8 echipe.
+	Consider ca aceasta proiect a fost foarte util deoarece am invatat mai bine sa folosesc functiile din STL. De asemenea am invatat utilitatea structurilor de 
+date prezentate si aplicabilitatea lor in probleme reale.
+	Consider ca problema a fost realizata intr-o modalitate eficienta deoarece au fost utilizate functii din STL.
+
+Cerinta 1
+
+	Aceasta cerinta presupune doar implementarea de functii obsinuite de tip constructor, setter, getter. Nu consider ca necesita
+explicatii aditionale.
+
+
+Cerinta 2
 	
-	Programul contine 6 clase:
+	 In aceasta cerinta am implementat gettere si settere pentru clasa Server.
+
+
+Cerinta 3
 	
-	Clasa Player:	Contine membrii de date: firstName, secondnName(sting), points(double) si urmator(Player*) - folosit pentru 
-	parcurgere dearece am realizat o lista de playeri pentru fiecare echipa. In ceea ce priveste metodele clasa contine trei 
-	constructori, destructor si setere si getere pentru fiecare membru de date.
-	
-	Clasa Echipa:	Contine membrii de date: nr_playeri(int)-numarul de playeri din echipa, nume_echipa(string), p(Player*) - pointer 
-	catre primul jucator din lista de jucatori a echipei, urmator(Echipa*) - folosit pentru parcurgere dearece am realizat o lista 
-	de echipe. Clasa contine doi constructori, destructor , getMedie(ce returneaza media punctajelor jucatorilor) si setere si getere
-	pentru fiecare membru de date.
-	
-	Clasa Lista_Echipe:	  Contine membrii de date: nr_echipe(int) - numarul de echipe, e(Echipa*) - pointer catre prima echipa din 
-	lista de echipe. Ca metode am implementat doi constructori, functiile de afisare recursiva(afisareRecursiv),
-	addEchipa(adauga o echipa la lista), removeEchipa(elimina o echipa din lista), removeFirst(elimina prima echipa din lista),
-	removeNechipe(ce rezolva cerinta 2), getPutere(returneaza cea mai mare putere a lui 2 < numarul de echipe), seter pt numarul
-	de echipe si getere pentru toti membrii de date.
-	
-	Clasa Meciuri:	  Contine membrii de date: coada_meciuri(Coada*) - in care este stocata coada de meciuri, 
-	versus(Echipa*) - stiva auxiliara pe care am folosit-o pentru afisarea inversa a cozii de meciuri, castigatori, 
-	invinsi(Echipa*) - stive in care sunt stocati castigatorii, respectiv invinsii dupa fiecare meci, nr_echipe(int) - numarul de echipe.
-	Metodele din aceasta clasa sunt:
-					- constructorul: pune lista de echipe in coada de meciuri ;
-					
-					- campionat: Apeland functia meci, realizeaza meciuri intre echipe pana cand raman doar 8 echipe in coada dupa care 
-					acestea sunt stocate intr-o lista top8. In continuare se apeleaza functia de meci pana cand ramane o singura echipa 
-					in coada. In final, daca cerinta presupune acest lucru, se va afisa top8;
-					
-					- Meci: Aceasta metoda va lua doua echipe din coada de echipe, le va aduga in stiva versus si le va compara mediile,
-					iar pe cea cu media mai mare o pune in stiva de castigatori iar pe cealalta in stiva de invinsi;
-					
-					- pushcastigatori: adauga o echipa in stiva de castigatori;
-					
-					- pushinvinsi: adauga o echipa in stiva de invinsi;
-					
-					- pushversus: adauga o echipa in stiva versus;
-					
-					- popcastigatori: elimina o echipa in stiva de castigatori;
-					
-					- popinvinsi: elimina o echipa in stiva de invinsi;
-					
-					- popversus: elimina o echipa in stiva versus;
-					
-					- afisareversus: afiseaza continutul stivei versus;
-					
-					- afisarewin: afiseaza continutul stivei de castigatori;
-					
-	Clasa Coada: 	Constine membrii de date: nr_echipe(int)- nr de echipe, e(Echipa*) - prima echipa din coada, u(Echipa*) - ultima 
-	echipa din coada. Metodele acestei clase sunt: doi constuctori, removeFirst(sterge prima echipa din coada), seter si geter pentru 
-	numarul de echipe, seter si geter pentru ultimul nod, si geter pentru primul nod.
-	
-	Clasa ArboreB:  Contine membrii de date t(Echipa*) - o echipa din nod, left(ArboreB*) - fiul stang, right(ArboreB*) - fiul drept.
-				Metode: setere si getere pentru toti membrii de date, un constructor, newNode - creeaza un nou nod, insert - insereaza un nod,
-				insertall - insereaza o lista de echipe in arbore si afisareArbore- care afiseaza arborele.
-				Nu reusesc sa afisez arborele dupa inserare. Reusesc doar sa afisez in timpul inserarii.
-					
-	
+	Query 1: In lista am salvat lista de produse. Am parcurs lista si am verificat categoria si tipul produsului
+iar daca acestea indeplineau conditiile, atunci salvam produsul in listaEspressorD. La final am returnat
+listaEspressorD.
+
+	Query 2: In lista am salvat lista de useri. Am parcurs lista si am verificat daca tipul de User este BasicUser si
+daca costul transportului este <11.5. Daca se indeplineau conditiile introduceam userul in listaUseri. La final am 
+returnat listaUseri.
+
+	Query 3: In lista am salvat lista de produse. Am parcurs lista de produse si am verificat daca tipul produsului este ResealedProduct
+si daca motivul returnarii este "lipsa_accesorii". Pentru a apela functia getReason() am folosit un cast dinamic pentru a schimba tipul de date 
+a unui produs in ResealedProduct. Daca se indeplinesc conditiile, introduc produsul in listaProdR. Apoi am sortat lista folosiind functia sort
+din STL (listaProdR.sort(Utility::compare_resealed_products);). Am implementat in clasa Utility functia compare_resealed_products care
+compara doua instante de tip ResealedProduct dupa pret (si in cadrul acestei functii folosesc un cast dinamic).
+La final am returnat listaProdR.
+
+	Query 4: In lista am salcat lista de produse. Am parcurs lista de produse si am verificat daca tipul produsului este FoodProduct.
+Daca se indeplinea conditia salvam produsul in listaAlimente. pentru sortare folosesc dunctia sort din STL (listaAlimente.sort(Utility::compare_alimentary_products).
+In clasa Utility am implementat functia compare_alimentary_products care compara doua produse de tip FoodProduct dupa tara de origine si pret.
+In final returnez listaAlimente.
+
+	Query 5: Am initializat un map<string, int> numita harta. Am parcurs lista de useri si in map am inserat judetul si numarul de 
+utilizatori din judetul respectiv. Am parcurs map-ul si am cautat maximul. Am parcurs lista de user din nou si daca se indeplineau conditiile (judetul 
+sa fie cel cu cei mai multi utilizatori, apartamentul = 0 si blocul = "-"), salvam userul in listaUser. Apoi am sorat listaUser cu functiia sort din STL
+(listaUser.push_back(lista)). In clasa Utility am implementat functiia compare_id care compara doi Useri dupa userId. La final returnez listaUser.
+
+	Query 6: Am parcurs lista de produse si am salvat in listaP doar produsele din categoria "telefon" sau "imprimanta". Dupa am parcurs lista de useri,
+iar pentru fiecare PremiumUser parcurg listaProduse si lista discounturilor. Daca id-ul produseolr din cele doua liste coincide, atunci, in listaUserP
+inserez userul. La final returnez listaUserP.
+
+Cerinta 4
+
+	Am implementat functii de tip get si set. 
+	In functiia vector<int> processRequests(vector<int> requestsNo) am initializat un int numit elementsAtOnePoint care memoreaza cate elemente contine
+vectorul lru. Parcurg vectorul requestNo si daca numarul de elemente din lru (elemntsAtOnePoint) este mai mic decat capacitatea lui lru , atunci voi
+verifica daca elementul de inserat exista deja in lru. Daca nu, atunci voi insera la inceputul vectorului lru requestNo.at(i). Daca exista, permut toate 
+elementele cu o pozitie la dreapta pana la elementul de adaugat, iar la inceputul vectorului lru introduc requestNo.at(i).
+Daca numarul de elemente din lru (elementsAtOnePoint) este mai mare decat capacitatea, atunci folosesc acelasi procedeu, dar, in plus, daca elementul pe care 
+vreau sa il introduc nu exista in lru si il inserez, trebuie sa sterg ultimul element din lru (lru.erase(lru.begin() + n)). 
+
+
+Cerinta 5
+
+	In clasa Product:
+	-bool checkQuantity(int quantity) - am verificat daca requestedQuantity este mai mic decat quatity.
+	-void decreaseQuantity(int quantity) - scad cantitatea cu requestedQuantity
+	-void increaseQuantity(int quantity) - cresc cantitatea cu requestedQuantity
+
+	In clasa ShoppingCart:
+	-int getQuantity(int id) - returneaza cantitatea produsului cu id = productID                 
+    	-void addProduct(int id, int quantity): - insereaza in shoppingCart produsul cu ID-ul si cu cantitatea quantity   
+    	-void raiseQuantity(int id, int quantity) - creste cantitatea din shoppingCart a produsului cu id-ul dat ca parametru cu cantitatea quantity data ca 
+parametru.
+    	-void lowerQuantity(int id, int quantity) - scade cantitatea din shoppingCart a produsului cu id-ul dat ca parametru cu cantitatea quantity data ca 
+parametru.
+    	-void deleteProduct(int id) - sterge produsul cu id-ul dat ca parametru.
+
+	In clasa Server:
+	-bool requestAddProduct(int userID, int productID, int quantity) - Parcurg map-ul __UserID__ProductsCart__. Daca am gasit userul caruia vreau sa ii 
+adaug produsul, verific daca produsul exista deja in cosul sau. In acest caz verific daca exista cantitatea dorita pe stoc, iar daca exista cresc cantitatea din 
+cos si o scad pe cea din stoc. Daca produsul nu este deja in cos, verific daca exista cantitatea dorita, il adaug si scad cantitatea din stoc. Daca userul nu a 
+fost gasit, atunci functia ve returna false. In cazul in care operatia a fost realizata cu succes, functia returneaza true.
+
+	-bool Server::requestDeleteProduct(int userID, int productID, int quantity) - Parcurg map-ul __UserID__ProductsCart__. Daca am gasit userul caruia vreau 
+sa ii sterg produsul, verific daca produsul exista in cosul de cumparaturi. In cazul in care gasim produsul vom verifica daca cantitatea de eliminat este mai 
+mare decat cantitatea existenta in cos. Daca este mai mare, atunci vom creste cantitatea din stoc si vom sterge produsul din cos. In cazul in care cantitatea de eliminat
+este mai mica decat cantitatea din cos, atunci vom scadea cantitatea din cos cu quantity,si vom creste cantitatea din stoc.
+Daca operatia a fost realizata cu succes, atunci functia va returna true. Daca nu gasim userul sau produsul in cosul de cumparaturi, atunci functia va returna false.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
